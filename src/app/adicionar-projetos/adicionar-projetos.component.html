@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card">
+      <h2>Adicionar/Editar Livro</h2>
+  
+      <!-- Botões de Adicionar e Editar -->
+      <div class="buttons">
+        <button (click)="mostrarFormAdicionar()">Adicionar Livro</button>
+        <button (click)="mostrarFormEditar()" *ngIf="livroExistente">Editar Livro</button>
+      </div>
+  
+      <!-- Formulário para adicionar/editar livro -->
+      <div class="form" *ngIf="exibirFormAdicionar || exibirFormEditar">
+        <label for="nome">Nome do Livro</label>
+        <input type="text" id="nome" [(ngModel)]="nomeLivro" placeholder="Nome do Livro">
+  
+        <label for="sinopse">Sinopse</label>
+        <textarea id="sinopse" [(ngModel)]="sinopseLivro" placeholder="Sinopse do Livro"></textarea>
+  
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" [(ngModel)]="categoriaLivro" placeholder="Categoria do Livro">
+  
+        <label for="preco">Preço</label>
+        <input type="number" id="preco" [(ngModel)]="precoLivro" placeholder="Preço do Livro">
+  
+        <button (click)="adicionarLivro()" *ngIf="exibirFormAdicionar">Adicionar Livro</button>
+        <button (click)="editarLivro()" *ngIf="exibirFormEditar">Salvar Alterações</button>
+      </div>
+  
+      <!-- Informações do Livro -->
+      <div class="livro-info" *ngIf="livroExistente">
+        <h3>Informações do Livro:</h3>
+        <p><strong>Nome:</strong> {{ nomeLivro }}</p>
+        <p><strong>Sinopse:</strong> {{ sinopseLivro }}</p>
+        <p><strong>Categoria:</strong> {{ categoriaLivro }}</p>
+        <p><strong>Preço:</strong> {{ precoLivro | currency }}</p>
+      </div>
+    </div>
+  </div>
+  

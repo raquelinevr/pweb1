@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .buttons button {
+    margin-right: 10px;
+  }
+  
+  .form label,
+  .livro-info h3 {
+    margin-top: 10px;
+  }
+  
+  .form input,
+  .form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .form button {
+    margin-top: 10px;
+  }
+  
+  .livro-info p {
+    margin-bottom: 5px;
+  }
+  
